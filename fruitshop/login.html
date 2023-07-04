@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>planets</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="javascript.js">
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="logo">
+      <img src="r.png" alt="logo" width="150px" height="150px">
+    </div>
+    <div class="brand-title">LOGIN</div>
+    <div class="inputs">
+      <label>EMAIL</label>
+      <input type="email" placeholder="example@test.com" id="helo"/>
+      <label>PASSWORD</label>
+      <input type="password" placeholder="Min 6 charaters long" id="myInput"  onclick="myFunction()"/>
+      <button value="submit" onclick="return hello()">LOGIN</button>
+    </div>
+  </div>
+
+  <script>
+  function myFunction()
+{
+
+    const x = document.getElementById("myInput")
+   if(x.type === "password"){
+     x.type = "text"
+   } else {
+     x.type = "password"
+   }
+ } 
+ function hello(){
+  let s = document.getElementById('myInput')
+  let a = document.getElementById('helo')
+  if(s.value.length == 0 ){
+  alert('E-mail and password both are required')
+  }else  if(s.value.length <= 3 ){
+  alert('password must be under 4 to 8 characters')
+  }else if(s.value.length > 9 ){
+  alert('password must be under 4 to 8 characters')
+  }else if(a.value.length == 0 ){
+  alert('E-mail and password both are required')
+  }else{
+    alert('login Succesfully')
+  }
+}
+  </script>
+</body>
+
+</html>
